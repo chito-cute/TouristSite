@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philippines Tourist Spots</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: url('file:///C:/Users/Acer/Downloads/f60e137bf0b30ab3111546a32148a904.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            font-family: 'Merriweather', serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        nav {
+            background-color: #0288d1;
+            color: white;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #01579b;
+        }
+        .hero {
+            text-align: center;
+            padding: 20px;
+        }
+        .hero img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        section h2 {
+            color: #0288d1;
+            border-bottom: 2px solid #0288d1;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-family: 'Merriweather', serif;
+        }
+        section p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        footer {
+            background-color: #01579b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+        }
+        .hidden {
+            display: none;
+        }
+        .place-button {
+            background-color: #0288d1;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .place-button:hover {
+            background-color: #01579b;
+        }
+        .places-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .places-container div {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .places-container div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .places-container img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+        .places-container h3 {
+            margin: 10px;
+            color: #0288d1;
+            font-family: 'Merriweather', serif;
+        }
+        .places-container p {
+            margin: 10px;
+            line-height: 1.4;
+            font-size: 0.9rem;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            width: 100%;
+        }
+        .contact-form button {
+            background-color: #0288d1;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #01579b;
+        }
+    </style>
+    <script>
+        function togglePlaces() {
+            const places = document.getElementById('places-details');
+            places.classList.toggle('hidden');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Explore the Beauty of the Philippines</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#places">Tourist Spots</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Philippines</h2>
+            <p>Discover the unparalleled beauty of the Philippines, a tropical paradise filled with breathtaking landscapes, rich culture, and warm hospitality. From pristine beaches to historical landmarks, there's something here for everyone. Let your adventure begin!</p>
+        </section>
+
+        <section id="places">
+            <h2>Must-Visit Tourist Spots</h2>
+            <button class="place-button" onclick="togglePlaces()">Show/Hide Places</button>
+            <div id="places-details" class="hidden places-container">
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/san-agustin-church.jpg" alt="San Agustin Church">
+                    <h3>San Agustin Church</h3>
+                    <p>Located in Intramuros, Manila, this UNESCO World Heritage Site is the oldest stone church in the Philippines, celebrated for its intricate Baroque architecture and historical significance.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/chocolate-hills-PHIL0116-3a853dd3c6704d84bb5162bb37404279.jpg" alt="Chocolate Hills">
+                    <h3>Chocolate Hills</h3>
+                    <p>Found in Bohol, these geological marvels turn chocolate brown during the dry season and are surrounded by legends that captivate locals and tourists alike.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/banaue-travel-guide-home-of-rice-terraces-in-the-philippines-4.jpg" alt="Banaue Rice Terraces">
+                    <h3>Banaue Rice Terraces</h3>
+                    <p>Hand-carved into the mountains over 2,000 years ago, these terraces in Ifugao Province reflect the ingenuity and resilience of early Filipino communities.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/boracay-map-guide-1024x585.jpg" alt="Boracay">
+                    <h3>Boracay</h3>
+                    <p>Known for its powdery white sand and crystal-clear waters, Boracay Island offers a mix of relaxation, water sports, and vibrant nightlife.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(8).jpg" alt="El Nido">
+                    <h3>El Nido</h3>
+                    <p>Located in Palawan, this paradise boasts majestic limestone cliffs, hidden lagoons, and vibrant marine life, perfect for island-hopping adventures.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/puerto-princesa-underground-river.jpg" alt="Palawan Underground River">
+                    <h3>Palawan Underground River</h3>
+                    <p>A UNESCO World Heritage Site, this natural wonder in Puerto Princesa features a navigable underground river flowing through a stunning cave system.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/14120924-untitled_cover_1085x694.webp" alt="Vigan">
+                    <h3>Vigan</h3>
+                    <p>A step back in time, Vigan in Ilocos Sur showcases cobblestone streets, ancestral homes, and kalesa rides that reflect its Spanish colonial history.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/MAC_Shopping.webp" alt="Cebu">
+                    <h3>Cebu</h3>
+                    <p>Known as the Queen City of the South, Cebu offers a mix of historical landmarks like Magellan's Cross and stunning beaches.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(9).jpg" alt="Siargao">
+                    <h3>Siargao</h3>
+                    <p>The surfing capital of the Philippines, Siargao is also known for its laid-back vibe, natural rock pools, and stunning palm tree landscapes.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/Taal-Volcano-Batangas-1500x500.jpg" alt="Taal Volcano">
+                    <h3>Taal Volcano</h3>
+                    <p>A picturesque volcano located within a lake in Batangas, offering stunning views and hiking opportunities.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(10).jpg" alt="Mayon Volcano">
+                    <h3>Mayon Volcano</h3>
+                    <p>Renowned for its perfect cone shape, this active volcano in Albay is a sight to behold and a favorite among photographers.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(11).jpg" alt="Puerto Galera">
+                    <h3>Puerto Galera</h3>
+                    <p>A paradise for divers, this destination in Mindoro offers rich coral reefs and vibrant marine life, ideal for snorkeling and diving.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/27-malapascua-island-aerial-view-banner.jpg" alt="Malapascua Island">
+                    <h3>Malapascua Island</h3>
+                    <p>Famous for its stunning beaches and as a diving hub to encounter thresher sharks and other unique marine creatures.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(12).jpg" alt="Camiguin Island">
+                    <h3>Camiguin Island</h3>
+                    <p>Also called the "Island Born of Fire," Camiguin is rich in volcanic landscapes, natural springs, and historic landmarks.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/Beach%20Blue%20Lagoon%202-min.jpg" alt="Pagudpud">
+                    <h3>Pagudpud</h3>
+                    <p>A gem in Ilocos Norte, Pagudpud offers pristine beaches, dramatic windmills, and panoramic ocean views.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/DJI_0195.jpg" alt="Coron">
+                    <h3>Coron</h3>
+                    <p>A haven for divers, Coron features breathtaking lagoons, limestone cliffs, and World War II shipwreck dive sites.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(13).jpg" alt="Siquijor">
+                    <h3>Siquijor</h3>
+                    <p>This mystical island is famed for its enchanting waterfalls, white sand beaches, and folklore traditions.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/batanes-tourist-spots-2-1024x1024.jpg" alt="Batanes">
+                    <h3>Batanes</h3>
+                    <p>Known for its dramatic cliffs, rolling hills, and unique stone houses, Batanes offers serenity and breathtaking scenery.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/images%20(14).jpg" alt="Hundred Islands">
+                    <h3>Hundred Islands</h3>
+                    <p>This national park in Pangasinan features over a hundred islets, each with unique charm and adventure opportunities.</p>
+                </div>
+                <div>
+                    <img src="file:///C:/Users/Acer/Downloads/Hinatuan_enchanted_river.jpg" alt="Enchanted River">
+                    <h3>Enchanted River</h3>
+                    <p>Located in Surigao del Sur, this river is famed for its strikingly clear, blue-green waters and mysterious depths.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We aim to showcase the best destinations in the Philippines, guiding travelers to explore its wonders. With a deep passion for tourism and culture, our mission is to inspire everyone to discover the diverse beauty of the Philippines. Whether you’re seeking adventure, relaxation, or cultural experiences, let us be your trusted travel companion.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Explore Philippines. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
